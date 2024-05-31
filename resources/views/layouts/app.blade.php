@@ -20,7 +20,6 @@
     <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />
 
     <!-- PLUGINS CSS STYLE -->
-    <link href="{{ asset('assets/plugins/simplebar/simplebar.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
 
     <!-- No Extra plugin used -->
@@ -116,22 +115,17 @@
     <!-- Javascript -->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/simplebar/simplebar.min.js') }}"></script>
 
     <script src='{{ asset('assets/plugins/charts/Chart.min.js') }}'></script>
     <script src='{{ asset('assets/js/chart.js') }}'></script>
-    <script src='{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js') }}'></script>
-    <script src='{{ asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill.js') }}'></script>
-    <script src='{{ asset('assets/js/vector-map.js') }}'></script>
 
     <script src='{{ asset('assets/plugins/daterangepicker/moment.min.js') }}'></script>
     <script src='{{ asset('assets/plugins/daterangepicker/daterangepicker.js') }}'></script>
     <script src='{{ asset('assets/js/date-range.js') }}'></script>
     <script src='{{ asset('assets/plugins/toastr/toastr.min.js') }}'></script>
     <script src="{{ asset('assets/js/sleek.js') }}"></script>
-    <link href="{{ asset('assets/options/optionswitch.css') }}" rel="stylesheet">
-    <script src="{{ asset('assets/options/optionswitcher.js') }}"></script>
     @livewireScripts
+    @stack('script')
 </body>
 
 </html>
