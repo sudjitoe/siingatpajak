@@ -16,6 +16,8 @@ class PegawaiForm extends Form
     public $jenis_kelamin = '';
     public $id_telegram = '';
 
+    public ?Pegawai $pegawai;
+
     public function simpan()
     {
         $this->validate();
@@ -28,5 +30,33 @@ class PegawaiForm extends Form
         ]);
 
         return $simpan;
+    }
+
+    public function getData(Pegawai $pegawai)
+    {
+        $this->pegawai = $pegawai;
+        $this->nip = $pegawai->nip;
+        $this->nama = $pegawai->nama;
+        $this->jenis_kelamin = $pegawai->jenis_kelamin;
+        $this->id_telegram = $pegawai->id_telegram;
+    }
+
+    public function ubah()
+    {
+        $this->validate();
+        $ubah = $this->pegawai->update([
+            'nip' => $this->nip,
+            'nama' => $this->nama,
+            'jenis_kelamin' => $this->jenis_kelamin,
+            'id_telegram' => $this->id_telegram,
+        ]);
+
+        return $ubah;
+    }
+
+    public function hapus(Pegawai $pegawai)
+    {
+        $hapus = $pegawai->delete();
+        return $hapus;
     }
 }

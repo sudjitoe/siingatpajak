@@ -5,10 +5,12 @@ namespace App\Livewire\Pegawai;
 use App\Models\Pegawai;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class PegawaiIndex extends Component
 {
 
+    use WithPagination;
     public $sortField = 'id';
     public $sortAsc = true;
 
@@ -43,5 +45,14 @@ class PegawaiIndex extends Component
     public function bukaModal()
     {
         $this->dispatch('bukaModalForm');
+    }
+
+    public function pilihData($pegawai, $aksi)
+    {
+        if ($aksi == 'ubah') {
+            $this->dispatch('getDataForm', $pegawai);
+        } else {
+            $this->dispatch('hapusData', $pegawai);
+        }
     }
 }

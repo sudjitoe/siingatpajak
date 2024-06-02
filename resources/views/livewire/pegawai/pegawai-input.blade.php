@@ -47,8 +47,9 @@
         </div>
 
         <div class="modal-footer">
-            <button class="btn btn-danger btn-pill" data-dismiss="modal">Batal</button>
-            <button wire:click='simpanData' class="btn btn-primary btn-pill">Simpan</button>
+            <button wire:click="bersihkan" class="btn btn-danger btn-pill" data-dismiss="modal">Batal</button>
+            <button wire:click='simpanData'
+                class="btn btn-{{ $simpan ? 'primary' : 'warning' }} btn-pill">{{ $simpan ? 'Simpan' : 'Ubah' }}</button>
         </div>
     </div>
 </div>

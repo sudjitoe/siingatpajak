@@ -21,9 +21,9 @@
                             Tampil : &nbsp;
                             <select wire:model.live='perPage' name="perPage" id="perPage" class="form-control">
                                 <option value="5">5</option>
-                                <option value="5">10</option>
-                                <option value="5">15</option>
-                                <option value="5">25</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="25">25</option>
                                 <option value="0">Semua</option>
                             </select>
                         </div>
@@ -36,39 +36,39 @@
                         <thead>
                             <tr>
                                 <th scope="col"><a wire:click="sortBy('id')" href="#"
-                                        class="text-center align-middle" role="button"></a>
-                                    #
-                                    @include('includes._sort-icon', [
-                                        'field' => 'id',
-                                    ])
+                                        class="text-center align-middle" role="button">
+                                        #
+                                        @include('includes._sort-icon', [
+                                            'field' => 'id',
+                                        ])</a>
                                 </th>
                                 <th scope="col"><a wire:click="sortBy('nip')" href="#"
-                                        class="text-center align-middle" role="button"></a>
-                                    NIP
-                                    @include('includes._sort-icon', [
-                                        'field' => 'nip',
-                                    ])
+                                        class="text-center align-middle" role="button">
+                                        NIP
+                                        @include('includes._sort-icon', [
+                                            'field' => 'nip',
+                                        ])</a>
                                 </th>
                                 <th scope="col"><a wire:click="sortBy('nama')" href="#"
-                                        class="text-center align-middle" role="button"></a>
-                                    Nama
-                                    @include('includes._sort-icon', [
-                                        'field' => 'nama',
-                                    ])
+                                        class="text-center align-middle" role="button">
+                                        Nama
+                                        @include('includes._sort-icon', [
+                                            'field' => 'nama',
+                                        ])</a>
                                 </th>
                                 <th scope="col"><a wire:click="sortBy('jenis_kelamin')" href="#"
-                                        class="text-center align-middle" role="button"></a>
-                                    Jenis Kelamin
-                                    @include('includes._sort-icon', [
-                                        'field' => 'jenis_kelamin',
-                                    ])
+                                        class="text-center align-middle" role="button">
+                                        Jenis Kelamin
+                                        @include('includes._sort-icon', [
+                                            'field' => 'jenis_kelamin',
+                                        ])</a>
                                 </th>
                                 <th scope="col"><a wire:click="sortBy('id_telegram')" href="#"
-                                        class="text-center align-middle" role="button"></a>
-                                    ID Telegram
-                                    @include('includes._sort-icon', [
-                                        'field' => 'id_telegram',
-                                    ])
+                                        class="text-center align-middle" role="button">
+                                        ID Telegram
+                                        @include('includes._sort-icon', [
+                                            'field' => 'id_telegram',
+                                        ])</a>
                                 </th>
                                 <th scope="col">Aksi</th>
                             </tr>
@@ -81,7 +81,12 @@
                                     <td>{{ $pegawai->nama }}</td>
                                     <td>{{ $pegawai->jenis_kelamin }}</td>
                                     <td>{{ $pegawai->id_telegram }}</td>
-                                    <td>Aksi</td>
+                                    <td>
+                                        <button wire:click="pilihData({{ $pegawai }},'ubah')"
+                                            class="btn btn-sm btn-warning">Ubah</button>
+                                        <button wire:click="pilihData({{ $pegawai }},'hapus')"
+                                            class="btn btn-sm btn-danger">Hapus</button>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
@@ -90,6 +95,9 @@
                             @endforelse
                         </tbody>
                     </table>
+                </div>
+                <div class="card-footer">
+                    {{ $pegawais->links() }}
                 </div>
             </div>
         </div>
