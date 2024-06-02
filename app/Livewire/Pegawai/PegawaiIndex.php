@@ -39,4 +39,9 @@ class PegawaiIndex extends Component
                 ->paginate($this->perPage != 0 ? $this->perPage : Pegawai::count()),
         ]);
     }
+
+    public function bukaModal()
+    {
+        $this->dispatch('bukaModalForm');
+    }
 }
