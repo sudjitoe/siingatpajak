@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    {{-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> --}}
+    {{--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> --}}
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
@@ -24,11 +25,11 @@
     <link href="{{ asset('assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
 
     <!-- No Extra plugin used -->
-    <link href='{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}' rel='stylesheet'>
-    <link href='{{ asset('assets/plugins/daterangepicker/daterangepicker.css') }}' rel='stylesheet'>
+    <link href='{{ asset(' assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}' rel='stylesheet'>
+    <link href='{{ asset(' assets/plugins/daterangepicker/daterangepicker.css') }}' rel='stylesheet'>
 
 
-    <link href='{{ asset('assets/plugins/toastr/toastr.min.css') }}' rel='stylesheet'>
+    <link href='{{ asset(' assets/plugins/toastr/toastr.min.css') }}' rel='stylesheet'>
 
     <!-- SLEEK CSS -->
     <link id="sleek-css" rel="stylesheet" href="{{ asset('assets/css/sleek.css') }}" />
@@ -117,13 +118,13 @@
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src='{{ asset('assets/plugins/charts/Chart.min.js') }}'></script>
-    <script src='{{ asset('assets/js/chart.js') }}'></script>
+    <script src='{{ asset(' assets/plugins/charts/Chart.min.js') }}'></script>
+    <script src='{{ asset(' assets/js/chart.js') }}'></script>
 
-    <script src='{{ asset('assets/plugins/daterangepicker/moment.min.js') }}'></script>
-    <script src='{{ asset('assets/plugins/daterangepicker/daterangepicker.js') }}'></script>
-    <script src='{{ asset('assets/js/date-range.js') }}'></script>
-    <script src='{{ asset('assets/plugins/toastr/toastr.min.js') }}'></script>
+    <script src='{{ asset(' assets/plugins/daterangepicker/moment.min.js') }}'></script>
+    <script src='{{ asset(' assets/plugins/daterangepicker/daterangepicker.js') }}'></script>
+    <script src='{{ asset(' assets/js/date-range.js') }}'></script>
+    <script src='{{ asset(' assets/plugins/toastr/toastr.min.js') }}'></script>
     <script src="{{ asset('assets/js/sleek.js') }}"></script>
     @livewireScripts
     @stack('script')
@@ -132,48 +133,52 @@
 </html>
 
 
-{{-- <!DOCTYPE html>
+{{--
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Styles -->
-        @livewireStyles
-    </head>
-    <body class="font-sans antialiased">
-        <x-banner />
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+    <!-- Styles -->
+    @livewireStyles
+</head>
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+<body class="font-sans antialiased">
+    <x-banner />
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+    <div class="min-h-screen bg-gray-100">
+        @livewire('navigation-menu')
 
-        @stack('modals')
+        <!-- Page Heading -->
+        @if (isset($header))
+        <header class="bg-white shadow">
+            <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                {{ $header }}
+            </div>
+        </header>
+        @endif
 
-        @livewireScripts
-    </body>
+        <!-- Page Content -->
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
+
+    @stack('modals')
+
+    @livewireScripts
+</body>
+
 </html> --}}
