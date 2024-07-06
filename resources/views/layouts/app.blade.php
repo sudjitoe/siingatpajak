@@ -3,15 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    {{--
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> --}}
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
         content="Sleek Dashboard - Free Bootstrap 4 Admin Dashboard Template and UI Kit. It is very powerful bootstrap admin dashboard, which allows you to build products like admin panels, content management systems and CRMs etc.">
-
-    <!-- theme meta -->
-    <meta name="theme-name" content="sleek" />
 
     <title>{{ $title ?? 'Dashboard' }}</title>
 
@@ -25,11 +20,11 @@
     <link href="{{ asset('assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
 
     <!-- No Extra plugin used -->
-    <link href='{{ asset(' assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}' rel='stylesheet'>
-    <link href='{{ asset(' assets/plugins/daterangepicker/daterangepicker.css') }}' rel='stylesheet'>
+    <link href='{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}' rel='stylesheet'>
+    <link href='{{ asset('assets/plugins/daterangepicker/daterangepicker.css') }}' rel='stylesheet'>
 
 
-    <link href='{{ asset(' assets/plugins/toastr/toastr.min.css') }}' rel='stylesheet'>
+    <link href='{{ asset('assets/plugins/toastr/toastr.min.css') }}' rel='stylesheet'>
 
     <!-- SLEEK CSS -->
     <link id="sleek-css" rel="stylesheet" href="{{ asset('assets/css/sleek.css') }}" />
@@ -118,13 +113,13 @@
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src='{{ asset(' assets/plugins/charts/Chart.min.js') }}'></script>
-    <script src='{{ asset(' assets/js/chart.js') }}'></script>
+    <script src='{{ asset('assets/plugins/charts/Chart.min.js') }}'></script>
+    <script src='{{ asset('assets/js/chart.js') }}'></script>
 
-    <script src='{{ asset(' assets/plugins/daterangepicker/moment.min.js') }}'></script>
-    <script src='{{ asset(' assets/plugins/daterangepicker/daterangepicker.js') }}'></script>
-    <script src='{{ asset(' assets/js/date-range.js') }}'></script>
-    <script src='{{ asset(' assets/plugins/toastr/toastr.min.js') }}'></script>
+    <script src='{{ asset('assets/plugins/daterangepicker/moment.min.js') }}'></script>
+    <script src='{{ asset('assets/plugins/daterangepicker/daterangepicker.js') }}'></script>
+    <script src='{{ asset('assets/js/date-range.js') }}'></script>
+    <script src='{{ asset('assets/plugins/toastr/toastr.min.js') }}'></script>
     <script src="{{ asset('assets/js/sleek.js') }}"></script>
     @livewireScripts
     @stack('script')
